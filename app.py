@@ -47,10 +47,22 @@ st.markdown(
             color: {THEME['text']} !important;
             border: 1.5px solid {THEME['gold']}66 !important;
             border-radius: 6px !important;
+            -webkit-text-fill-color: {THEME['text']} !important;
+            opacity: 1 !important;
+        }}
+        input[type="text"]:disabled, input[type="password"]:disabled {{
+            background-color: #F5F0E8 !important;
+            color: {THEME['text']} !important;
+            -webkit-text-fill-color: {THEME['text']} !important;
+            opacity: 1 !important;
         }}
         input[type="text"]:focus, input[type="password"]:focus {{
             border-color: {THEME['gold']} !important;
             box-shadow: 0 0 0 2px {THEME['gold']}33 !important;
+        }}
+        input[type="text"]::placeholder, input[type="password"]::placeholder {{
+            color: #999999 !important;
+            -webkit-text-fill-color: #999999 !important;
         }}
 
         /* ── Selectbox / radio tweaks ── */
@@ -74,6 +86,38 @@ st.markdown(
         /* ── Divider colour ── */
         hr {{
             border-color: {THEME['gold']}44 !important;
+        }}
+
+        /* ── Streamlit footer ── */
+        footer {{
+            background-color: {THEME['bg']} !important;
+            color: {THEME['text']} !important;
+        }}
+        footer a {{
+            color: {THEME['gold']} !important;
+        }}
+        .stMainFooter, [data-testid="stBottom"] {{
+            background-color: {THEME['bg']} !important;
+        }}
+        .stMainFooter *, [data-testid="stBottom"] * {{
+            color: {THEME['text']} !important;
+            -webkit-text-fill-color: {THEME['text']} !important;
+        }}
+
+        /* ── Streamlit alerts (warning, info, error, success) ── */
+        .stAlert, [data-testid="stAlert"] {{
+            background-color: #FFF3CD !important;
+            border: 1px solid {THEME['gold']}88 !important;
+            border-radius: 8px !important;
+        }}
+        .stAlert *, [data-testid="stAlert"] * {{
+            color: #664D03 !important;
+            -webkit-text-fill-color: #664D03 !important;
+        }}
+        .stAlert p, [data-testid="stAlert"] p {{
+            color: #664D03 !important;
+            -webkit-text-fill-color: #664D03 !important;
+            font-size: 14px !important;
         }}
     </style>
     """,
